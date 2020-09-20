@@ -11,6 +11,11 @@ def prop(n, p, N):
 def infoMeasure(n, p, N):
     return -math.log(prop(n,p,N))
 def sumProb(N, p):
+    """
+            sumProb(10,0.5) = 0.9990234375,
+            sumProb(100,0.5) = sumProb(100,0.5) = 1.0
+            => tổng xác suất của phân bố binomial tiến dần về 1
+        """
     sum = 0.0
     for i in range(1,N+1):
         sum += prop(i, p, N)
