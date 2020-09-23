@@ -18,7 +18,7 @@ def sumProb(N, p):
             => tổng xác suất của phân bố binomial tiến dần về 1
     """
     sum = 0.0
-    for i in range(1,N+1):
+    for i in range(0,N+1):
         sum += prop(i, p, N)
     return sum
 def approxEntropy(N, p):
@@ -26,4 +26,3 @@ def approxEntropy(N, p):
     for i in range(1,N+1):
         result += prop(i,p, N)*infoMeasure(i, p, N)
     return result
-print(nCr(5,2))
