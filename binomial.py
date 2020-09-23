@@ -9,7 +9,7 @@ def nCr(n,r):
 def prop(n, p, N):
     return nCr(N, n)*(p**n)*((1-p)**(N-n))
 def infoMeasure(n, p, N):
-    return -math.log(prop(n,p,N))
+    return -math.log(prop(n,p,N),2)
 def sumProb(N, p):
     """
             sumProb(5,0.5) = 0.96875,
